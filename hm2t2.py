@@ -10,4 +10,4 @@ while first_list or second_list:
     if second_list:
         third_list.append(second_list.popleft())
 
-print(third_list)
+print(sorted(third_list))
