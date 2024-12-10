@@ -1,4 +1,5 @@
-def is_norm_brackets(s):
+s = input('Введите скобки:')
+def is_norm_skobki(s):
     stack = []
     d = {
     '(': ')',
@@ -13,12 +14,8 @@ def is_norm_brackets(s):
             t = stack.pop()
             if d[t] != elem:
                 return False
-            return stack == []
     return True
-while True:
-    s = input("Введите строку со скобками: ")
-    print("Скобки закрыты верно:", is_norm_brackets(s))
-
+print("Скобки закрыты верно:", is_norm_skobki(s))
 
 
 
