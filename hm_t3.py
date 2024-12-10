@@ -1,8 +1,9 @@
 s = input()
-s = s.split(' ')
 stack = []
-for i in s:
-    if i == '+':
+for i in s.split(' '):
+    if i.isdigit():
+        stack.append(int(i))
+    elif i == '+':
         a = stack.pop()
         b = stack.pop()
         stack.append(a+b)
@@ -17,7 +18,5 @@ for i in s:
     elif i == '/':
         a = stack.pop()
         b = stack.pop()
-        stack.append(a // b)
-    else:
-        stack.append(int(i))
+        stack.append(b // a)
 print(stack[0])
